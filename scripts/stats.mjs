@@ -19,7 +19,7 @@ const fmt = (n) => n.toLocaleString('en-US');
 
 const QUERY = `query($login: String!) {
   user(login: $login) {
-    followers { totalCount }
+    createdAt
     contributionsCollection {
       contributionCalendar { totalContributions weeks { contributionDays { date contributionCount contributionLevel } } }
     }
@@ -69,7 +69,8 @@ async function fetchStats() {
     total: cal.totalContributions,
     repos: u.repositories.totalCount,
     stars: u.repositories.nodes.reduce((a, r) => a + r.stargazerCount, 0),
-    followers: u.followers.totalCount,
+    languages: langs.size,
+    years: Math.max(1, Math.floor((Date.now() - Date.parse(u.createdAt)) / (365.25 * 864e5))),
     longest, current,
     weeks: cal.weeks.slice(-30).map((w) => w.contributionDays.map((d) => LEVEL[d.contributionLevel] ?? 0)),
     top,
@@ -86,7 +87,7 @@ function render(theme, s, fonts) {
   const stats = [
     [fmt(s.total), 'contributions'], [`${s.current}d`, 'current streak'],
     [`${s.longest}d`, 'longest streak'], [fmt(s.repos), 'public repos'],
-    [fmt(s.stars), 'stars earned'], [fmt(s.followers), 'followers'],
+    [fmt(s.languages), 'languages used'], [`${s.years}y`, 'on GitHub'],
   ];
   stats.forEach(([v, label], i) => {
     const x = 32 + (i % 3) * 150, y = 120 + Math.floor(i / 3) * 104;
@@ -133,7 +134,7 @@ function render(theme, s, fonts) {
 .pop{animation:pop .8s cubic-bezier(.22,1,.36,1) both}@keyframes pop{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}`;
   const desc = `${s.total} contributions in the last year, ${s.current}-day current streak, ${s.longest}-day longest streak, ` +
-    `${s.repos} public repos, ${s.stars} stars. Top languages: ${s.top.map((l) => `${l.name} ${l.pct.toFixed(0)}%`).join(', ')}.`;
+    `${s.repos} public repos, ${s.languages} languages, ${s.years} years on GitHub. Top languages: ${s.top.map((l) => `${l.name} ${l.pct.toFixed(0)}%`).join(', ')}.`;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="t d">` +
     `<title id="t">GitHub activity</title><desc id="d">${esc(desc)}</desc><style>${css}</style>${b.join('')}</svg>`;
 }
