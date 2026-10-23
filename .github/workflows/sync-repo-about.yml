@@ -1,0 +1,21 @@
+name: Sync repo About panels
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/repo-about.json'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Apply descriptions, websites and topics
+        run: node scripts/sync-about.mjs
+        env:
+          REPO_ABOUT_TOKEN: ${{ secrets.REPO_ABOUT_TOKEN }}

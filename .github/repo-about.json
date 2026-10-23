@@ -1,0 +1,186 @@
+{
+  "owner": "RayaanQ",
+  "repos": {
+    "Portfolio": {
+      "description": "Hand-coded, framework-free portfolio: interactive neural-network hero, live project visuals, a terminal and a ⌘K menu. Hosted free on GitHub Pages.",
+      "homepage": "https://rayaanq.github.io/Portfolio/",
+      "topics": [
+        "portfolio",
+        "personal-website",
+        "github-pages",
+        "javascript",
+        "html-css",
+        "canvas",
+        "no-framework",
+        "software-engineer",
+        "ai-engineer"
+      ]
+    },
+    "community-crisis-predictor": {
+      "description": "Forecasts community mental-health crises on Reddit a week ahead: LSTM + XGBoost over sentiment, distress lexicons and BERTopic drift, with SHAP and LLM weekly briefs.",
+      "homepage": "https://rayaanq.github.io/Portfolio/#case-crisis",
+      "topics": [
+        "machine-learning",
+        "time-series-forecasting",
+        "lstm",
+        "pytorch",
+        "xgboost",
+        "bertopic",
+        "shap",
+        "nlp",
+        "mental-health",
+        "streamlit",
+        "reddit"
+      ]
+    },
+    "AI-Web-Page-Summarizer": {
+      "description": "Chrome extension that summarizes and chats with any web page, including PDFs, images (OCR) and YouTube, grounded by RAG with live web search.",
+      "homepage": "https://rayaanq.github.io/Portfolio/#case-summarizer",
+      "topics": [
+        "chrome-extension",
+        "rag",
+        "langchain",
+        "llm",
+        "gemini",
+        "fastapi",
+        "ocr",
+        "tesseract",
+        "yt-dlp",
+        "summarization",
+        "docker"
+      ]
+    },
+    "JurisTrack": {
+      "description": "Geo-compliance radar: flags region-specific legal risk (EU DSA, CCPA, Utah, Florida, NCMEC) in feature specs with explainable LLM reasoning and a risk score.",
+      "homepage": "https://rayaanq.github.io/Portfolio/#case-juristrack",
+      "topics": [
+        "regtech",
+        "compliance",
+        "explainable-ai",
+        "llm",
+        "gemini",
+        "tf-idf",
+        "fastapi",
+        "react",
+        "recharts",
+        "hackathon"
+      ]
+    },
+    "Misarticulation-Project": {
+      "description": "LingoLeap: gamified speech-therapy web app that helps Hindi-speaking children with misarticulation practise pronunciation using speech recognition.",
+      "homepage": "https://rayaanq.github.io/Portfolio/#case-lingoleap",
+      "topics": [
+        "speech-recognition",
+        "edtech",
+        "accessibility",
+        "hindi",
+        "nextjs",
+        "typescript",
+        "nodejs",
+        "express",
+        "mongodb",
+        "tailwindcss"
+      ]
+    },
+    "Movie-Recommendation-System": {
+      "description": "Content-based movie recommender on TMDB 5000: stemmed tags, CountVectorizer and cosine similarity, served in a Streamlit app with TMDB posters.",
+      "homepage": "",
+      "topics": [
+        "recommender-system",
+        "machine-learning",
+        "scikit-learn",
+        "nlp",
+        "cosine-similarity",
+        "streamlit",
+        "tmdb",
+        "python"
+      ]
+    },
+    "SMS-Spam-Classifier": {
+      "description": "NLP model that flags spam text messages, trained on the UCI SMS Spam Collection and served with Streamlit.",
+      "homepage": "",
+      "topics": [
+        "nlp",
+        "text-classification",
+        "spam-detection",
+        "machine-learning",
+        "scikit-learn",
+        "streamlit",
+        "python"
+      ]
+    },
+    "Fitness-Tracker-API": {
+      "description": "MERN workout tracker: create users, log exercises with duration and date, and edit or delete them through a REST API.",
+      "homepage": "",
+      "topics": [
+        "mern",
+        "mongodb",
+        "express",
+        "react",
+        "nodejs",
+        "rest-api",
+        "crud",
+        "fitness"
+      ]
+    },
+    "Hospital-Management-System": {
+      "description": "HappyHealers: responsive hospital website with online appointment booking, built on Express, Handlebars and MongoDB.",
+      "homepage": "",
+      "topics": [
+        "nodejs",
+        "express",
+        "mongodb",
+        "mongoose",
+        "handlebars",
+        "appointment-booking",
+        "healthcare"
+      ]
+    },
+    "Tourist-Places-Management-System": {
+      "description": "Flask web app for exploring tourist destinations, with a contact form stored in SQLite through SQLAlchemy.",
+      "homepage": "",
+      "topics": [
+        "flask",
+        "python",
+        "sqlite",
+        "sqlalchemy",
+        "tourism",
+        "web-app"
+      ]
+    },
+    "Matrimonial-Website": {
+      "description": "PerfectPartner: matrimonial website with hashed-password registration and login, built on PHP and MySQL.",
+      "homepage": "",
+      "topics": [
+        "php",
+        "mysql",
+        "xampp",
+        "authentication",
+        "html-css",
+        "web-app"
+      ]
+    },
+    "Data-Structures": {
+      "description": "Classic data structures implemented from scratch in C++ with detailed comments, from beginner to advanced. Starts with linked lists.",
+      "homepage": "",
+      "topics": [
+        "data-structures",
+        "cpp",
+        "linked-list",
+        "algorithms",
+        "dsa",
+        "learning"
+      ]
+    },
+    "RayaanQ": {
+      "description": "✦ My GitHub profile: animated SVGs generated by this repo, refreshed daily by GitHub Actions.",
+      "homepage": "https://rayaanq.github.io/Portfolio/",
+      "topics": [
+        "github-profile",
+        "profile-readme",
+        "svg",
+        "github-actions"
+      ]
+    }
+  }
+}
