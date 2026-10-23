@@ -5,7 +5,7 @@ import { readFile } from 'node:fs/promises';
 
 const token = process.env.REPO_ABOUT_TOKEN;
 if (!token) {
-  console.log('::warning::REPO_ABOUT_TOKEN secret is not set, so nothing was changed. See .github/repo-about.json for setup.');
+  console.log('::warning::REPO_ABOUT_TOKEN secret is not set, so nothing was changed. See the comment at the top of scripts/sync-about.mjs for setup.');
   process.exit(0);
 }
 
